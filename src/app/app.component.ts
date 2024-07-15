@@ -6,6 +6,6 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, CommonModule],
-  template: '<router-outlet></router-outlet><br><h1 i18n="@@testingTranslate">Here is a text in english</h1><h2>{{ 1000 | currency:"BRL" }}</h2>'
+  template: '<router-outlet></router-outlet>'
 })
 export class AppComponent { }
