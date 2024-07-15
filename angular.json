@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "aot": true,
-            "outputPath": "dist/portfolio",
+            "outputPath": "dist",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -36,7 +36,8 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "localize": true
           },
           "configurations": {
             "production": {
@@ -52,7 +53,8 @@
                   "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "localize": ["pt", "en-US"]
             },
             "development": {
               "optimization": false,
@@ -104,7 +106,10 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "pt": "src/locale/messages.pt.xlf"
+          "pt": {
+            "baseHref": "",
+            "translation": "src/locale/messages.pt.xlf"
+          }
         }
       }
     }
