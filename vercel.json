@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/browser/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/pt-BR/(.*)",
+      "dest": "/pt-BR/index.html"
+    },
+    {
+      "src": "/en-US/(.*)",
+      "dest": "/en-US/index.html"
+    },
+    {
+      "src": "/",
+      "status": 302,
+      "headers": {
+        "Location": "/pt-BR"
+      }
+    }
+  ]
+}

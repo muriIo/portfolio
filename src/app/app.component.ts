@@ -6,6 +6,11 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, CommonModule],
-  template: '<router-outlet></router-outlet>'
+  template: `
+    <div style="display: flex; align-items: center; justify-content: center;" i18n>
+      Under construction
+    </div>
+    <router-outlet></router-outlet>
+  `
 })
 export class AppComponent { }

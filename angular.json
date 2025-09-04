@@ -54,7 +54,7 @@
                 }
               ],
               "outputHashing": "all",
-              "localize": ["pt", "en-US"]
+              "localize": ["pt-BR", "en-US"]
             },
             "development": {
               "optimization": false,
@@ -106,8 +106,8 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "pt": {
-            "baseHref": "",
+          "pt-BR": {
+            "baseHref": "pt-BR/",
             "translation": "src/locale/messages.pt.xlf"
           }
         }
