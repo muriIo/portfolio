@@ -1,26 +1,44 @@
 {
-  "version": 2,
-  "builds": [
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run start",
+  "framework": "angular",
+  "outputDirectory": "dist/browser",
+  "redirects": [
     {
-      "src": "dist/browser/**/*",
-      "use": "@vercel/static"
+      "source": "/",
+      "destination": "/pt-BR",
+      "permanent": true
     }
   ],
-  "routes": [
+  "headers": [
     {
-      "src": "/pt-BR/(.*)",
-      "dest": "/pt-BR/index.html"
+      "source": "/pt-BR",
+      "headers": [
+        {
+          "key": "Location",
+          "value": "/pt-BR"
+        }
+      ]
     },
     {
-      "src": "/en-US/(.*)",
-      "dest": "/en-US/index.html"
+      "source": "/en-US",
+      "headers": [
+        {
+          "key": "Location",
+          "value": "/en-US"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/pt-BR/(.*)",
+      "destination": "/pt-BR/index.html"
     },
     {
-      "src": "/",
-      "status": 302,
-      "headers": {
-        "Location": "/pt-BR"
-      }
+      "source": "/en-US/(.*)",
+      "destination": "/en-US/index.html"
     }
   ]
 }
